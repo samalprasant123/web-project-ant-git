@@ -2,7 +2,7 @@
   <!-- Define the properties used by the build -->
   <property name="app.name" value="Simple Web Project"/>
   <property name="app.version" value="0.1-dev"/>
-  <property name="tomcatserver.home" value="D:\Softwares\apache-tomcat-9.0.0.M3-windows-x64\apache-tomcat-9.0.0.M3" />
+  <property name="tomcatserver.home" value="D:\Softwares\apache-tomcat-8.0.32" />
   <property name="work.home" value="${basedir}/work"/>
   <property name="dist.home" value="${basedir}/dist"/>
   <property name="src.home" value="${basedir}/src"/>
