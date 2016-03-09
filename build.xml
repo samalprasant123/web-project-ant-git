@@ -6,9 +6,9 @@
   <property name="work.home" value="${basedir}/work"/>
   <property name="dist.home" value="${basedir}/dist"/>
 <!--
-  <property name="dist.home1" value="D:\Softwares\apache-tomcat-8.0.32\webapps"/>
+
 -->
-  <property name="dist.home1" value="D:\Softwares\apache-tomcat-8.0.32\webapps"/>
+  <property name="dist.home1" value="D:\Softwares\apache-tomcat-8.0.32\webapps" />
   <property name="src.home" value="${basedir}/src"/>
   <property name="web.home" value="${basedir}/web"/>
 
@@ -67,10 +67,13 @@
   </target>
 
 
-  <target name="dist,dist1" depends="compile"
+  <target name="dist" depends="compile"
           description="Create WAR file for binary distribution">
     <jar jarfile="${dist.home}/${app.name}-${app.version}.war"
          basedir="${work.home}"/>
+    <copy todir="${dist.home1}">
+      <fileset dir="${dist.home}"/>
+    </copy>
   </target>
 
 </project> 
