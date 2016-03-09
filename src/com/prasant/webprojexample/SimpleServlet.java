@@ -33,6 +33,7 @@ public class SimpleServlet extends HttpServlet {
 		System.out.println("Start doGet() of class SimpleServlet.");
 		PrintWriter writer = response.getWriter();
 		writer.println("Hello!!! This is a simple web project.");
+		writer.println("Version: 1.0");
 		System.out.println("End doGet() of class SimpleServlet.");
 	}
 

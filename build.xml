@@ -1,16 +1,13 @@
 <project name="Web Project using Ant and Git" default="help" basedir=".">
   <!-- Define the properties used by the build -->
-  <property name="app.name" value="Simple Web Project"/>
-  <property name="app.version" value="0.3-dev"/>
+  <property name="app.name" value="SimpleWebProject" />
+  <property name="app.version" value="0.4-dev" />
   <property name="tomcatserver.home" value="D:\Softwares\apache-tomcat-8.0.32" />
-  <property name="work.home" value="${basedir}/work"/>
-  <property name="dist.home" value="${basedir}/dist"/>
-<!--
-
--->
-  <property name="dist.home1" value="D:\Softwares\apache-tomcat-8.0.32\webapps" />
-  <property name="src.home" value="${basedir}/src"/>
-  <property name="web.home" value="${basedir}/web"/>
+  <property name="work.home" value="${basedir}/work" />
+  <property name="dist.home" value="${basedir}/dist" />
+  <property name="src.home" value="${basedir}/src" />
+  <property name="web.home" value="${basedir}/web" />
+  <property name="war.dir" value="D:\Softwares\apache-tomcat-8.0.32\webapps" />
 
   <target name="help">
     <echo>You can use the following targets:</echo>
@@ -70,9 +67,9 @@
   <target name="dist" depends="compile"
           description="Create WAR file for binary distribution">
     <jar jarfile="${dist.home}/${app.name}-${app.version}.war"
-         basedir="${work.home}"/>
-    <copy todir="${dist.home1}">
-      <fileset dir="${dist.home}"/>
+         basedir="${work.home}" />
+    <copy todir="${war.dir}">
+      <fileset dir="${dist.home}" />
     </copy>
   </target>
 
